@@ -42,7 +42,7 @@ class DishDetail extends Component{
             return (<div></div>)
         }
         const cmnts = comments.map(comment => {
-            return (
+            return (<div class="container">
                 <li key={comment.id}>
                     <p>{comment.comment}</p>
                     <p>-- {comment.author},
@@ -54,6 +54,7 @@ class DishDetail extends Component{
                     }).format(new Date(Date.parse(comment.date)))}
                     </p>
                 </li>
+                </div>
             )
         })
         return (
